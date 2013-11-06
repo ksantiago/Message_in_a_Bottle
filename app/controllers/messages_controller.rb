@@ -7,10 +7,9 @@ class MessagesController < ApplicationController
   end
 
   def create
-    binding.pry
     @message = Message.new
-    @message.title = params["message"]["title"]
-    @message.body = params["message"]["body"]
+    @message["title"] = params["message"]["title"]
+    @message["body"] = params["message"]["body"]
     @message.save
     respond_with @message
   end
