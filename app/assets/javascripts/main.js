@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 document.ready = function() {
+=======
+$( document ).ready(function() {
+
+>>>>>>> 48e5d826d3e1ad6926ca3692e745104871248827
   var $new_message = $('#new-message');
-  $new_message.on('click',displayForm);
-}
+  $new_message.on('click', displayForm);
+
 
 function displayForm() {
   var $form = $('#message-id');
   $form.removeClass('message-class');
-  $form.addEventListener('submit',sendMessage);
+  $form.addEventListener('submit', sendMessage);
 }
 
 function sendMessage() {
@@ -17,9 +22,6 @@ function sendMessage() {
   var xhr = new XMLHttpRequest();
   xhr.open("post", "/messages", false);
   xhr.send(form);
-}
+  }
 
-
-
-
-
+});
