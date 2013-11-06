@@ -1,4 +1,4 @@
-window.onload = function() {
+document.ready = function() {
   var $new_message = $('#new-message');
   $new_message.on('click',displayForm);
 }
@@ -8,8 +8,6 @@ function displayForm() {
   $form.removeClass('message-class');
   $form.addEventListener('submit',sendMessage);
 }
-
-
 
 function sendMessage() {
   var form = new FormData();
