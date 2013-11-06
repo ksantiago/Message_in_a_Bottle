@@ -1,8 +1,5 @@
-// javascript will go here
-
-
 function sendMessage() {
-  var form = new FormData;
+  var form = new FormData();
   form.append("message[title]", this.elements['title'].value);
   form.append("message[body]", this.elements['body'].value);
   form.append("message[is_read]", this.elements['is_read'].value);
