@@ -1,7 +1,6 @@
 Ship2shipApp::Application.routes.draw do
 
-  root :to => "messages#index"
-
+  root to: 'welcome#index'
   resources :messages
 
 end
