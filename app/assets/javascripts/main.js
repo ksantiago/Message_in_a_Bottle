@@ -1,3 +1,16 @@
+window.onload = function() {
+  var $new_message = $('#new-message');
+  $new_message.on('click',displayForm);
+}
+
+function displayForm() {
+  var $form = $('#message-id');
+  $form.removeClass('message-class');
+  $form.addEventListener('submit',sendMessage);
+}
+
+
+
 function sendMessage() {
   var form = new FormData();
   form.append("message[title]", this.elements['title'].value);
@@ -8,6 +21,7 @@ function sendMessage() {
   xhr.send(form);
 }
 
-$('button').on("click", sendMessage);
+
+
 
 
