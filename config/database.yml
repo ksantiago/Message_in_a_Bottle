@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 313a6a1cc01469931bdd164d28024937766dc518
 development:
   adapter: postgresql
   encoding: unicode
