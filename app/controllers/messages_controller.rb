@@ -8,8 +8,8 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new
-    @message["title"] = params["message"]["title"]
-    @message["body"] = params["message"]["body"]
+    @message.message = params["message"]["message"]
+    @message.body = params["message"]["body"]
     @message.save
     respond_with @message
   end
