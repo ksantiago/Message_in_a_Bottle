@@ -15,11 +15,9 @@ function showMessages(){
   for(var i = 0; i < $response.length; i++){
     var body = $response[i].body
     var message = $response[i].message
-    var content = "Body: " + body + "\n Message: " + message
+    var content = "Message: " + message + "\n Body: " + body
     $newMessages.push(content)
   }
-
-  debugger;
 
   var $list = $('<ul>')
   for(var i = 0; i < $newMessages.length; i++){
