@@ -7,7 +7,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.create(params[:message])
+    @message = Message.new
+    @message.title = params[:title]
+    @message.body = params[:body]
+    @message.save
     respond_with @message
   end
 
