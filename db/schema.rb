@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20131106143314) do
   create_table "messages", :force => true do |t|
     t.string   "body"
     t.string   "message"
-    t.boolean  "is_read"
+    t.boolean  "is_read?"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
