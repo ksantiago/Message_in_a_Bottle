@@ -1,15 +1,9 @@
 <h1>MESSAGES</h1>
 
-<button class="new-message">Add New Message</button>
+<button id="new-message">Add New Message</button>
 
-<div class="message-class" id="message-id">
-  <form_for(@message) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-
-    <%= f.submit "Add" %>
-  <% end %>
-</div>
+<form class="message-class" id="message-id">
+  Title: <input type="text" name="title"><br>
+  Body: <input type="text" name="body"><br>
+  <input type="submit" value="Submit">
+</form>
