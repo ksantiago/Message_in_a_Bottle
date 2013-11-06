@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(params[:message])
+    respond_with @message
   end
 
   def show
