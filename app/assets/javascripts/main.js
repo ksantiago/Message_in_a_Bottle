@@ -1,15 +1,14 @@
-window.onload = function() {
+$( document ).ready(function() {
+
   var $new_message = $('#new-message');
-  $new_message.on('click',displayForm);
-}
+  $new_message.on('click', displayForm);
+
 
 function displayForm() {
   var $form = $('#message-id');
   $form.removeClass('message-class');
-  $form.addEventListener('submit',sendMessage);
+  $form.addEventListener('submit', sendMessage);
 }
-
-
 
 function sendMessage() {
   var form = new FormData();
@@ -19,9 +18,6 @@ function sendMessage() {
   var xhr = new XMLHttpRequest();
   xhr.open("post", "/messages", false);
   xhr.send(form);
-}
+  }
 
-
-
-
-
+});
